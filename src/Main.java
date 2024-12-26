@@ -4,7 +4,7 @@ package src;
  * console-calculator
  *
  * @author AlexandrAnatoliev
- * @version 0.1.0 2024-12-26
+ * @version 0.2.0 2024-12-26
  */
 
 
