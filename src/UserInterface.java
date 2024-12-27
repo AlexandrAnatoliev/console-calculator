@@ -9,19 +9,18 @@ import java.util.Scanner;
  */
 
 public class UserInterface {
-    private Expression expression;
     private Scanner scan;
 
-    public UserInterface() {
+    public UserInterface(Expression expression) {
         this.scan = new Scanner(System.in);
         System.out.println("Введите вычисляемое выражение");
-        this.expression = new Expression(scan.nextLine());
+        expression.setUserInput(scan.nextLine());
     }
 
-    public static void show(UserCommands command) {
-        if (command == UserCommands.HELP) {
+    public static void show(Expression expression) {
+        if (expression.getUserInput().equals("help")) {
             System.out.println("Доступны следующие команды");
-            System.out.println("HELP - получение справки");
+            System.out.println("help - получение справки");
         }
     }
 }

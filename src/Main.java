@@ -4,21 +4,14 @@ package src;
  * console-calculator
  *
  * @author AlexandrAnatoliev
- * @version 0.3.1 2024-12-26
+ * @version 0.3.2 2024-12-26
  */
 
 public class Main {
     public static void main(String[] args) {
-        Expression expr = new Expression("hello world");
-        expr.setNum1(1);
-        expr.setNum2(2);
-        expr.setOperation(Operations.PLUS);
-        expr.setResult(3);
-        System.out.println("Main class run");
-        System.out.println(expr.getUserInput());
-        System.out.println(expr.getNum1() + " " + expr.getNum2() + " " + expr.getResult());
-        System.out.println(expr.getOperation());
-        UserInterface.show(UserCommands.HELP);
-        UserInterface inter = new UserInterface();
+        Expression expression = new Expression();
+        UserInterface userInterface = new UserInterface(expression);
+        UserInterface.show(expression);
+
     }
 }
