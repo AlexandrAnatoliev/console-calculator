@@ -13,7 +13,7 @@ public class Expression {
     private double result;
 
     public Expression(String input) {
-        userInput = input;
+        this.userInput = input;
     }
 
     public void setNum1(double num1) {

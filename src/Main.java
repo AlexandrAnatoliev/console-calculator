@@ -18,5 +18,6 @@ public class Main {
         System.out.println(expr.getUserInput());
         System.out.println(expr.getNum1() + " " + expr.getNum2() + " " + expr.getResult());
         System.out.println(expr.getOperation());
+        UserInterface.show(UserCommands.HELP);
     }
 }
