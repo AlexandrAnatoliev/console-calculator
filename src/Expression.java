@@ -12,8 +12,15 @@ public class Expression {
     private Operations operation;
     private double result;
 
+    public Expression() {
+    }
+
     public Expression(String input) {
-        userInput = input;
+        this.userInput = input;
+    }
+
+    public void setUserInput(String userInput) {
+        this.userInput = userInput;
     }
 
     public void setNum1(double num1) {
