@@ -9,8 +9,13 @@ import java.util.Scanner;
  */
 
 public class UserInterface {
-    public static void main(String[] args) {
-        System.out.println("UserInterface class run");
+    private Expression expression;
+    private Scanner scan;
+
+    public UserInterface() {
+        this.scan = new Scanner(System.in);
+        System.out.println("Введите вычисляемое выражение");
+        this.expression = new Expression(scan.nextLine());
     }
 
     public static void show(UserCommands command) {
