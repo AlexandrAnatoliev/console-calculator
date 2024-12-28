@@ -15,30 +15,47 @@ public class Expression {
     public Expression() {
     }
 
+    /**
+     * @param input Выражение, вводимое пользователем в виде исходной строки
+     */
     public Expression(String input) {
         this.userInput = input;
     }
 
+    /**
+     * @param userInput Вводимое пользователем выражение в виде строки
+     */
     public void setUserInput(String userInput) {
         this.userInput = userInput;
     }
 
+    /**
+     * @param num1 Первое число выражения
+     */
     public void setNum1(double num1) {
         this.num1 = num1;
     }
 
+    /**
+     * @param num2 Второе число выражения
+     */
     public void setNum2(double num2) {
         this.num2 = num2;
     }
 
+    /**
+     * @param operation Вид выполняемой математической операции
+     */
     public void setOperation(Operations operation) {
         this.operation = operation;
     }
 
+    /**
+     * @param result Результат вычисления выражения
+     */
     public void setResult(double result) {
         this.result = result;
     }
-
 
     public double getNum1() {
         return num1;

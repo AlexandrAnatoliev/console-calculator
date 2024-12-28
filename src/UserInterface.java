@@ -11,16 +11,31 @@ import java.util.Scanner;
 public class UserInterface {
     private Scanner scan;
 
+    /**
+     * Конструктор класса UserInterface
+     * Запрашивает у пользователя вычисляемое выражение в виде строки и сохраняет его
+     *
+     * @param expression Экземпляр класса Expression, содержащего вычисляемое выражение
+     */
     public UserInterface(Expression expression) {
         this.scan = new Scanner(System.in);
         System.out.println("Введите вычисляемое выражение");
         expression.setUserInput(scan.nextLine());
     }
 
-    public static void show(Expression expression) {
+    /**
+     * Метод выводящий справку о командах, доступных пользователю
+     *
+     * @param expression Экземпляр класса Expression> содержащий вычисляемое значение
+     * @return Возвращает true в случае, если пользователь запросил справку, иначе - false
+     */
+    public static boolean showHelp(Expression expression) {
         if (expression.getUserInput().equals("help")) {
             System.out.println("Доступны следующие команды");
             System.out.println("help - получение справки");
+            return true;
         }
+        return false;
     }
+
 }
