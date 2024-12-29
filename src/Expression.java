@@ -7,38 +7,67 @@ package src;
 
 public class Expression {
     private String userInput;
+    private String[] words;
     private double num1;
     private double num2;
-    private Operations operation;
+    private Operators operator;
     private double result;
 
     public Expression() {
     }
 
+    /**
+     * @param input Выражение, вводимое пользователем в виде исходной строки
+     */
     public Expression(String input) {
         this.userInput = input;
     }
 
+    /**
+     * @param userInput Вводимое пользователем выражение в виде строки
+     */
     public void setUserInput(String userInput) {
         this.userInput = userInput;
     }
 
+    /**
+     * @param words Введенное пользователем выражение, разбитое на отдельные слова
+     */
+    public void setWords(String[] words) {
+        this.words = words;
+    }
+
+    /**
+     * @param num1 Первое число выражения
+     */
     public void setNum1(double num1) {
         this.num1 = num1;
     }
 
+    /**
+     * @param num2 Второе число выражения
+     */
     public void setNum2(double num2) {
         this.num2 = num2;
     }
 
-    public void setOperation(Operations operation) {
-        this.operation = operation;
+    /**
+     * @param operator Вид выполняемой математической операции
+     */
+    public void setOperator(Operators operator) {
+        this.operator = operator;
     }
 
+    /**
+     * @param result Результат вычисления выражения
+     */
     public void setResult(double result) {
         this.result = result;
     }
 
+    public String[] getWords() {
+        return words;
+    }
 
     public double getNum1() {
         return num1;
@@ -48,8 +77,8 @@ public class Expression {
         return num2;
     }
 
-    public Operations getOperation() {
-        return operation;
+    public Operators getOperator() {
+        return operator;
     }
 
     public double getResult() {

@@ -1,5 +1,5 @@
 package src;
 
-public enum Operations {
+public enum Operators {
     PLUS, MINUS
 }
