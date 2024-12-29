@@ -4,7 +4,7 @@ package src;
  * console-calculator
  *
  * @author AlexandrAnatoliev
- * @version 0.3.5 2024-12-26
+ * @version 0.4.0 2024-12-26
  */
 
 public class Main {
@@ -12,10 +12,10 @@ public class Main {
         Expression expression = new Expression();
         UserInterface userInterface = new UserInterface(expression);
 
-
-        if (UserInterface.showHelp(expression))
+        if (userInterface.showHelp(expression))
             System.out.println("введите еще раз");
 
+        userInterface.parseExpression(expression);
 
     }
 }

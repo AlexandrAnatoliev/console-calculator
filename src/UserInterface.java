@@ -1,5 +1,6 @@
 package src;
 
+import java.util.Objects;
 import java.util.Scanner;
 
 /**
@@ -26,10 +27,10 @@ public class UserInterface {
     /**
      * Метод выводящий справку о командах, доступных пользователю
      *
-     * @param expression Экземпляр класса Expression> содержащий вычисляемое значение
+     * @param expression Экземпляр класса Expression содержащий пользовательский ввод
      * @return Возвращает true в случае, если пользователь запросил справку, иначе - false
      */
-    public static boolean showHelp(Expression expression) {
+    public boolean showHelp(Expression expression) {
         if (expression.getUserInput().equals("help")) {
             System.out.println("Доступны следующие команды");
             System.out.println("help - получение справки");
@@ -38,4 +39,20 @@ public class UserInterface {
         return false;
     }
 
+    /**
+     * Метод, парсящий введенное в виде строки выражение пользователя на отдельные элементы
+     *
+     * @param expression Экземпляр класса Expression, содержащий пользовательский ввод
+     */
+    public void parseExpression(Expression expression) {
+        expression.setWords(expression.getUserInput().split(" "));
+        expression.setNum1(Double.parseDouble(expression.getWords()[0]));
+        expression.setNum2(Double.parseDouble(expression.getWords()[2]));
+        if (Objects.equals(expression.getWords()[1], "+")) {
+            expression.setOperator(Operators.PLUS);
+        }
+        if (Objects.equals(expression.getWords()[1], "-")) {
+            expression.setOperator(Operators.MINUS);
+        }
+    }
 }
