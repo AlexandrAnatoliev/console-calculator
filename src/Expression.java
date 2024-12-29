@@ -7,6 +7,7 @@ package src;
 
 public class Expression {
     private String userInput;
+    private String[] words;
     private double num1;
     private double num2;
     private Operators operator;
@@ -27,6 +28,13 @@ public class Expression {
      */
     public void setUserInput(String userInput) {
         this.userInput = userInput;
+    }
+
+    /**
+     * @param words Введенное пользователем выражение, разбитое на отдельные слова
+     */
+    public void setWords(String[] words) {
+        this.words = words;
     }
 
     /**
@@ -55,6 +63,10 @@ public class Expression {
      */
     public void setResult(double result) {
         this.result = result;
+    }
+
+    public String[] getWords() {
+        return words;
     }
 
     public double getNum1() {
