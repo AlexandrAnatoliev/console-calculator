@@ -9,7 +9,7 @@ public class Expression {
     private String userInput;
     private double num1;
     private double num2;
-    private Operations operation;
+    private Operators operator;
     private double result;
 
     public Expression() {
@@ -44,10 +44,10 @@ public class Expression {
     }
 
     /**
-     * @param operation Вид выполняемой математической операции
+     * @param operator Вид выполняемой математической операции
      */
-    public void setOperation(Operations operation) {
-        this.operation = operation;
+    public void setOperator(Operators operator) {
+        this.operator = operator;
     }
 
     /**
@@ -65,8 +65,8 @@ public class Expression {
         return num2;
     }
 
-    public Operations getOperation() {
-        return operation;
+    public Operators getOperator() {
+        return operator;
     }
 
     public double getResult() {
