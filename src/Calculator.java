@@ -20,6 +20,10 @@ public class Calculator {
             return expression.getNum1() - expression.getNum2();
         if (expression.getOperator() == Operators.PLUS)
             return expression.getNum1() + expression.getNum2();
+        if (expression.getOperator() == Operators.TIMES)
+            return expression.getNum1() * expression.getNum2();
+        if (expression.getOperator() == Operators.DIVISION)
+            return expression.getNum1() / expression.getNum2();
         return 0;
     }
 }
