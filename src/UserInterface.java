@@ -34,9 +34,20 @@ public class UserInterface {
         if (expression.getUserInput().equals("help")) {
             System.out.println("Доступны следующие команды");
             System.out.println("help - получение справки");
+            System.out.println("1 + 2 - сложение");
+            System.out.println("1 - 2 - вычитание");
+            System.out.println("1 * 2 - умножение");
+            System.out.println("1 / 2 - деление");
             return true;
         }
         return false;
+    }
+
+    public boolean newUserInput(Expression expression) {
+        this.scan = new Scanner(System.in);
+        System.out.println("Введите вычисляемое выражение");
+        expression.setUserInput(scan.nextLine());
+        return true;
     }
 
     /**
