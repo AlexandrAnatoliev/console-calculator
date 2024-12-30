@@ -4,7 +4,7 @@ package src;
  * console-calculator
  *
  * @author AlexandrAnatoliev
- * @version 0.6.0 2024-12-26
+ * @version 0.7.0 2024-12-26
  */
 
 public class Main {
@@ -13,7 +13,7 @@ public class Main {
         UserInterface userInterface = new UserInterface(expression);
 
         if (userInterface.showHelp(expression))
-            System.out.println("введите еще раз");
+            userInterface.newUserInput(expression);
 
         userInterface.parseExpression(expression);
         Calculator calculator = new Calculator();
