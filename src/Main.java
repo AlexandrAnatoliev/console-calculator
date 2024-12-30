@@ -4,7 +4,7 @@ package src;
  * console-calculator
  *
  * @author AlexandrAnatoliev
- * @version 0.4.0 2024-12-26
+ * @version 0.5.0 2024-12-26
  */
 
 public class Main {
@@ -16,6 +16,8 @@ public class Main {
             System.out.println("введите еще раз");
 
         userInterface.parseExpression(expression);
+        Calculator calculator = new Calculator();
+        System.out.println(calculator.getResult(expression));
 
     }
 }
