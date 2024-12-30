@@ -11,7 +11,6 @@ public class Expression {
     private double num1;
     private double num2;
     private Operators operator;
-    private double result;
 
     public Expression() {
     }
@@ -58,13 +57,6 @@ public class Expression {
         this.operator = operator;
     }
 
-    /**
-     * @param result Результат вычисления выражения
-     */
-    public void setResult(double result) {
-        this.result = result;
-    }
-
     public String[] getWords() {
         return words;
     }
@@ -79,10 +71,6 @@ public class Expression {
 
     public Operators getOperator() {
         return operator;
-    }
-
-    public double getResult() {
-        return result;
     }
 
     public String getUserInput() {
