@@ -54,5 +54,11 @@ public class UserInterface {
         if (Objects.equals(expression.getWords()[1], "-")) {
             expression.setOperator(Operators.MINUS);
         }
+        if (Objects.equals(expression.getWords()[1], "*")) {
+            expression.setOperator(Operators.TIMES);
+        }
+        if (Objects.equals(expression.getWords()[1], "/")) {
+            expression.setOperator(Operators.DIVISION);
+        }
     }
 }
