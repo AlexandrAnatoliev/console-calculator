@@ -4,13 +4,14 @@ package src;
  * console-calculator
  *
  * @author AlexandrAnatoliev
- * @version 0.7.0 2024-12-26
+ * @version 0.8.0 2024-12-26
  */
 
 public class Main {
     public static void main(String[] args) {
         Expression expression = new Expression();
-        UserInterface userInterface = new UserInterface(expression);
+        UserInterface userInterface = new UserInterface();
+        userInterface.newUserInput(expression);
 
         if (userInterface.showHelp(expression))
             userInterface.newUserInput(expression);
