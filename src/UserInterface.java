@@ -20,13 +20,11 @@ public class UserInterface {
      * Метод для ввода вычисляемого выражения пользователем
      *
      * @param expression Экземпляр класса Expression содержащий пользовательский ввод
-     * @return Возвращает true при корректном вводе
      */
-    public boolean newUserInput(Expression expression) {
+    public void setUserInput(Expression expression) {
         this.scan = new Scanner(System.in);
         System.out.println("Введите вычисляемое выражение");
         expression.setUserInput(scan.nextLine());
-        return true;
     }
 
     /**
