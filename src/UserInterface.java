@@ -12,13 +12,16 @@ import java.util.Scanner;
 public class UserInterface {
     private Scanner scan;
 
+    public UserInterface() {
+        this.scan = null;
+    }
+
     /**
-     * Конструктор класса UserInterface
-     * Запрашивает у пользователя вычисляемое выражение в виде строки и сохраняет его
+     * Метод для ввода вычисляемого выражения пользователем
      *
-     * @param expression Экземпляр класса Expression, содержащего вычисляемое выражение
+     * @param expression Экземпляр класса Expression содержащий пользовательский ввод
      */
-    public UserInterface(Expression expression) {
+    public void setUserInput(Expression expression) {
         this.scan = new Scanner(System.in);
         System.out.println("Введите вычисляемое выражение");
         expression.setUserInput(scan.nextLine());
@@ -43,12 +46,6 @@ public class UserInterface {
         return false;
     }
 
-    public boolean newUserInput(Expression expression) {
-        this.scan = new Scanner(System.in);
-        System.out.println("Введите вычисляемое выражение");
-        expression.setUserInput(scan.nextLine());
-        return true;
-    }
 
     /**
      * Метод, парсящий введенное в виде строки выражение пользователя на отдельные элементы
