@@ -4,7 +4,7 @@ package src;
  * console-calculator
  *
  * @author AlexandrAnatoliev
- * @version 0.9.2 2024-12-26
+ * @version 0.9.3 2024-12-26
  */
 
 public class Main {
@@ -18,7 +18,7 @@ public class Main {
 
         userInterface.parseExpression(expression);
         Calculator calculator = new Calculator();
-        System.out.println(calculator.getResult(expression));
+        System.out.println(expression.getUserInput() + " = " + calculator.getResult(expression));
 
     }
 }
