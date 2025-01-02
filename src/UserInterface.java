@@ -56,17 +56,14 @@ public class UserInterface {
         expression.setWords(expression.getUserInput().split(" "));
         expression.setNum1(Double.parseDouble(expression.getWords()[0]));
         expression.setNum2(Double.parseDouble(expression.getWords()[2]));
-        if (Objects.equals(expression.getWords()[1], "+")) {
-            expression.setOperator(Operators.PLUS);
-        }
-        if (Objects.equals(expression.getWords()[1], "-")) {
-            expression.setOperator(Operators.MINUS);
-        }
-        if (Objects.equals(expression.getWords()[1], "*")) {
-            expression.setOperator(Operators.TIMES);
-        }
-        if (Objects.equals(expression.getWords()[1], "/")) {
-            expression.setOperator(Operators.DIVISION);
+
+        switch (expression.getWords()[1])
+        {
+            case "+" -> expression.setOperator((Operators.PLUS));
+            case "-" -> expression.setOperator((Operators.MINUS));
+            case "*" -> expression.setOperator((Operators.TIMES));
+            case "/" -> expression.setOperator((Operators.DIVISION));
+            default -> System.out.println("Неверный оператор " + expression.getWords()[1]);
         }
     }
 }
