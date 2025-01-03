@@ -34,13 +34,13 @@ public class UserInterface {
      * @return Возвращает true в случае, если пользователь запросил справку, иначе - false
      */
     public boolean showHelp(Expression expression) {
-        if (expression.getUserInput().equals("help")) {
-            System.out.println("Доступны следующие команды");
-            System.out.println("help - получение справки");
-            System.out.println("1 + 2 - сложение");
-            System.out.println("1 - 2 - вычитание");
-            System.out.println("1 * 2 - умножение");
-            System.out.println("1 / 2 - деление");
+        if (expression.getUserInput().contains("help")) {
+            System.out.println("The following commands are available:");
+            System.out.println("help - get referential information");
+            System.out.println("1 + 2 - addition");
+            System.out.println("1 - 2 - subtraction");
+            System.out.println("1 * 2 - multiplication");
+            System.out.println("1 / 2 - division");
             return true;
         }
         return false;
@@ -57,8 +57,7 @@ public class UserInterface {
         expression.setNum1(Double.parseDouble(expression.getWords()[0]));
         expression.setNum2(Double.parseDouble(expression.getWords()[2]));
 
-        switch (expression.getWords()[1])
-        {
+        switch (expression.getWords()[1]) {
             case "+" -> expression.setOperator((Operators.PLUS));
             case "-" -> expression.setOperator((Operators.MINUS));
             case "*" -> expression.setOperator((Operators.TIMES));
