@@ -53,4 +53,4 @@ java -jar calculator.jar
 * вычитание
 * сложение
 
-Также поддерживается вызов справки при помощи команды **help**.
+Also you may to get referential information by **help** command and to stop the program by **exit**
