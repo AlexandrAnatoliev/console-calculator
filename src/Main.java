@@ -4,23 +4,29 @@ package src;
  * console-calculator
  *
  * @author AlexandrAnatoliev
- * @version 0.10.0 2024-12-26
+ * @version 0.10.1 2024-12-26
  */
 
 public class Main {
     public static void main(String[] args) {
         Expression expression = new Expression();
         UserInterface userInterface = new UserInterface();
-        userInterface.setUserInput(expression);
-        if (userInterface.inputIsExit(expression))
-            return;
-        if (userInterface.inputIsHelp(expression)) {
+
+        do {
             userInterface.setUserInput(expression);
+
+            if (userInterface.inputIsHelp(expression)) {
+                continue;
+            }
+
+            if (userInterface.inputIsExit(expression)) {
+                return;
+            }
+
+            userInterface.parseExpression(expression);
+            Calculator calculator = new Calculator();
+            System.out.println(expression.getUserInput() + " = " + calculator.getResult(expression));
         }
-
-        userInterface.parseExpression(expression);
-        Calculator calculator = new Calculator();
-        System.out.println(expression.getUserInput() + " = " + calculator.getResult(expression));
-
+        while (!userInterface.inputIsExit(expression));
     }
 }
