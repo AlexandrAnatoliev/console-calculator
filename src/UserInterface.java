@@ -35,12 +35,12 @@ public class UserInterface {
      */
     public boolean showHelp(Expression expression) {
         if (expression.getUserInput().contains("help")) {
-            System.out.println("Доступны следующие команды");
-            System.out.println("help - получение справки");
-            System.out.println("1 + 2 - сложение");
-            System.out.println("1 - 2 - вычитание");
-            System.out.println("1 * 2 - умножение");
-            System.out.println("1 / 2 - деление");
+            System.out.println("The following commands are available:");
+            System.out.println("help - get referential information");
+            System.out.println("1 + 2 - addition");
+            System.out.println("1 - 2 - subtraction");
+            System.out.println("1 * 2 - multiplication");
+            System.out.println("1 / 2 - division");
             return true;
         }
         return false;
