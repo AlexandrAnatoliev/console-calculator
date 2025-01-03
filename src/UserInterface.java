@@ -34,7 +34,7 @@ public class UserInterface {
      * @return Возвращает true в случае, если пользователь запросил справку, иначе - false
      */
     public boolean showHelp(Expression expression) {
-        if (expression.getUserInput().equals("help")) {
+        if (expression.getUserInput().contains("help")) {
             System.out.println("Доступны следующие команды");
             System.out.println("help - получение справки");
             System.out.println("1 + 2 - сложение");
@@ -57,8 +57,7 @@ public class UserInterface {
         expression.setNum1(Double.parseDouble(expression.getWords()[0]));
         expression.setNum2(Double.parseDouble(expression.getWords()[2]));
 
-        switch (expression.getWords()[1])
-        {
+        switch (expression.getWords()[1]) {
             case "+" -> expression.setOperator((Operators.PLUS));
             case "-" -> expression.setOperator((Operators.MINUS));
             case "*" -> expression.setOperator((Operators.TIMES));
