@@ -61,21 +61,26 @@ public class UserInterface {
     }
 
     /**
-     * Метод, парсящий введенное в виде строки выражение пользователя на отдельные элементы
+     * To parse user string input on elements
      *
-     * @param expression Экземпляр класса Expression, содержащий пользовательский ввод
+     * @param oldExpression Old expression contains user input in string
+     * @return New expression contains separate elements of math expression
      */
-    public void parseExpression(Expression expression) {
-        expression.setWords(expression.getUserInput().split(" "));
-        expression.setNum1(Double.parseDouble(expression.getWords()[0]));
-        expression.setNum2(Double.parseDouble(expression.getWords()[2]));
+    public Expression parseExpression(Expression oldExpression) {
+        Expression newExpression;
+        newExpression = new Expression();
+        newExpression.setUserInput(oldExpression.getUserInput());
+        newExpression.setWords(newExpression.getUserInput().split(" "));
+        newExpression.setNum1(Double.parseDouble(newExpression.getWords()[0]));
+        newExpression.setNum2(Double.parseDouble(newExpression.getWords()[2]));
 
-        switch (expression.getWords()[1]) {
-            case "+" -> expression.setOperator((Operators.PLUS));
-            case "-" -> expression.setOperator((Operators.MINUS));
-            case "*" -> expression.setOperator((Operators.TIMES));
-            case "/" -> expression.setOperator((Operators.DIVISION));
-            default -> System.out.println("Неверный оператор " + expression.getWords()[1]);
+        switch (newExpression.getWords()[1]) {
+            case "+" -> newExpression.setOperator((Operators.PLUS));
+            case "-" -> newExpression.setOperator((Operators.MINUS));
+            case "*" -> newExpression.setOperator((Operators.TIMES));
+            case "/" -> newExpression.setOperator((Operators.DIVISION));
+            default -> System.out.println("Неверный оператор " + newExpression.getWords()[1]);
         }
+        return newExpression;
     }
 }
