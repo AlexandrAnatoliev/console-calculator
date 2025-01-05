@@ -17,22 +17,12 @@ public class Calculator {
      */
     public double getResult(Expression expression) {
 
-        switch (expression.getOperator()) {
-            case MINUS -> {
-                return expression.getNum1() - expression.getNum2();
-            }
-            case PLUS -> {
-                return expression.getNum1() + expression.getNum2();
-            }
-            case TIMES -> {
-                return expression.getNum1() * expression.getNum2();
-            }
-            case DIVISION -> {
-                return expression.getNum1() / expression.getNum2();
-            }
-            default -> {
-                return 0;
-            }
-        }
+        return switch (expression.getOperator()) {
+            case MINUS -> expression.getNum1() - expression.getNum2();
+            case PLUS -> expression.getNum1() + expression.getNum2();
+            case TIMES -> expression.getNum1() * expression.getNum2();
+            case DIVISION -> expression.getNum1() / expression.getNum2();
+            default -> 0;
+        };
     }
 }
