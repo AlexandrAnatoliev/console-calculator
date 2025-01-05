@@ -10,10 +10,10 @@ public class Calculator {
     }
 
     /**
-     * Метод, вычисляющий результат выражения
+     * To compute expression result
      *
-     * @param expression Вычисляемое выражение
-     * @return Результат вычисления
+     * @param expression Contains math expression
+     * @return Expression result or "NullPointerException" if math operator is not correct
      */
     public double getResult(Expression expression) {
 
@@ -22,7 +22,6 @@ public class Calculator {
             case PLUS -> expression.getNum1() + expression.getNum2();
             case TIMES -> expression.getNum1() * expression.getNum2();
             case DIVISION -> expression.getNum1() / expression.getNum2();
-            default -> 0;
         };
     }
 }
