@@ -1,38 +1,26 @@
 package src;
 
-/**
- * Класс Calculator будет принимать уже распарсенный объект Expression
- * и возвращать результат вычисления выражения
- */
 
+/**
+ * To calculate math expression and return result
+ */
 public class Calculator {
     public Calculator() {
     }
 
     /**
-     * Метод, вычисляющий результат выражения
+     * To compute expression result
      *
-     * @param expression Вычисляемое выражение
-     * @return Результат вычисления
+     * @param expression Contains math expression
+     * @return Expression result or "NullPointerException" if math operator is not correct
      */
     public double getResult(Expression expression) {
 
-        switch (expression.getOperator()) {
-            case MINUS -> {
-                return expression.getNum1() - expression.getNum2();
-            }
-            case PLUS -> {
-                return expression.getNum1() + expression.getNum2();
-            }
-            case TIMES -> {
-                return expression.getNum1() * expression.getNum2();
-            }
-            case DIVISION -> {
-                return expression.getNum1() / expression.getNum2();
-            }
-            default -> {
-                return 0;
-            }
-        }
+        return switch (expression.getOperator()) {
+            case MINUS -> expression.getNum1() - expression.getNum2();
+            case PLUS -> expression.getNum1() + expression.getNum2();
+            case TIMES -> expression.getNum1() * expression.getNum2();
+            case DIVISION -> expression.getNum1() / expression.getNum2();
+        };
     }
 }

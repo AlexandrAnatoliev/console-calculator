@@ -26,10 +26,10 @@ public class UserInterface {
     }
 
     /**
-     * Метод выводящий справку о командах, доступных пользователю
+     * To output referential information about available commands
      *
-     * @param expression Экземпляр класса Expression содержащий пользовательский ввод
-     * @return Возвращает true в случае, если пользователь запросил справку, иначе - false
+     * @param expression Contains user input
+     * @return true if user input contains "help" commands
      */
     public boolean inputIsHelp(Expression expression) {
         if (expression.getUserInput().contains("help")) {
@@ -46,7 +46,9 @@ public class UserInterface {
     }
 
     /**
-     * Stop the program and exit
+     * To help stop the program and exit
+     * If user input contains "exit" command, then return "true"
+     * and outputs message about it
      *
      * @param expression User input
      * @return true if user input contains "exit" command
