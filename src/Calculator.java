@@ -1,10 +1,9 @@
 package src;
 
-/**
- * Класс Calculator будет принимать уже распарсенный объект Expression
- * и возвращать результат вычисления выражения
- */
 
+/**
+ * To calculate math expression and return result
+ */
 public class Calculator {
     public Calculator() {
     }

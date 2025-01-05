@@ -1,10 +1,9 @@
 package src;
 
-/**
- * Класс Expression содержит вводимое пользователем математическое выражение в виде исходной строки;
- * распарсенные значения членов выражения, название математической операции и вычисленный результат
- */
 
+/**
+ * Contains math expression
+ */
 public class Expression {
     private String userInput;
     private String[] words;
@@ -16,42 +15,42 @@ public class Expression {
     }
 
     /**
-     * @param input Выражение, вводимое пользователем в виде исходной строки
+     * @param userInput Contains user input in string
      */
-    public Expression(String input) {
-        this.userInput = input;
+    public Expression(String userInput) {
+        this.userInput = userInput;
     }
 
     /**
-     * @param userInput Вводимое пользователем выражение в виде строки
+     * @param userInput Contains user input in string
      */
     public void setUserInput(String userInput) {
         this.userInput = userInput;
     }
 
     /**
-     * @param words Введенное пользователем выражение, разбитое на отдельные слова
+     * @param words Contains user input in separate words
      */
     public void setWords(String[] words) {
         this.words = words;
     }
 
     /**
-     * @param num1 Первое число выражения
+     * @param num1 Contains first number expression
      */
     public void setNum1(double num1) {
         this.num1 = num1;
     }
 
     /**
-     * @param num2 Второе число выражения
+     * @param num2 Contains second number expression
      */
     public void setNum2(double num2) {
         this.num2 = num2;
     }
 
     /**
-     * @param operator Вид выполняемой математической операции
+     * @param operator Contains math operation
      */
     public void setOperator(Operators operator) {
         this.operator = operator;

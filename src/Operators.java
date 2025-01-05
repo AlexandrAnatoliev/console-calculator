@@ -1,5 +1,8 @@
 package src;
 
 public enum Operators {
-    PLUS, MINUS, TIMES, DIVISION
+    PLUS,
+    MINUS,
+    TIMES,
+    DIVISION
 }
