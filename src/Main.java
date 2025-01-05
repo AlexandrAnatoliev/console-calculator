@@ -4,16 +4,17 @@ package src;
  * console-calculator
  *
  * @author AlexandrAnatoliev
- * @version 0.11.0 2024-12-26
+ * @version 0.12.2 2024-12-26
  */
 
 public class Main {
     public static void main(String[] args) {
-        Expression expression = new Expression();
+        Expression expression;
         UserInterface userInterface = new UserInterface();
+        Calculator calculator = new Calculator();
 
         do {
-            userInterface.setUserInput(expression);
+            expression = userInterface.setUserInput();
 
             if (userInterface.inputIsHelp(expression)) {
                 continue;
@@ -24,7 +25,6 @@ public class Main {
             }
 
             expression = userInterface.parseExpression(expression);
-            Calculator calculator = new Calculator();
             System.out.println(expression.getUserInput() + " = " + calculator.getResult(expression));
         }
         while (!userInterface.inputIsExit(expression));

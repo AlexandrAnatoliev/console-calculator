@@ -3,27 +3,26 @@ package src;
 import java.util.Scanner;
 
 /**
- * Класс UserInterface создает объект Expression, принимает из консоли ввод пользователя
- * распарсивает его на элементы, возвращает пользователю вычисленный ответ
- * при необходимости выводит сообщения об ошибке и справку для пользователя об использовании программы
+ * To set new math expression by user string input
+ * and to parse user string input on elements
  */
-
 public class UserInterface {
-    private Scanner scan;
 
     public UserInterface() {
-        this.scan = null;
     }
 
     /**
-     * Метод для ввода вычисляемого выражения пользователем
+     * To set new math expression by user string input
      *
-     * @param expression Экземпляр класса Expression содержащий пользовательский ввод
+     * @return New expression contains user string input
      */
-    public void setUserInput(Expression expression) {
-        this.scan = new Scanner(System.in);
-        System.out.println("Введите вычисляемое выражение");
+    public Expression setUserInput() {
+        Scanner scan = new Scanner(System.in);
+        Expression expression;
+        expression = new Expression();
+        System.out.println("Input math expression or \"help\" command for to get referential information");
         expression.setUserInput(scan.nextLine());
+        return expression;
     }
 
     /**
