@@ -16,14 +16,17 @@ public class UserInterface {
     }
 
     /**
-     * Метод для ввода вычисляемого выражения пользователем
+     * To set new math expression by user string input
      *
-     * @param expression Экземпляр класса Expression содержащий пользовательский ввод
+     * @return New expression contains user string input
      */
-    public void setUserInput(Expression expression) {
+    public Expression setUserInput() {
         this.scan = new Scanner(System.in);
-        System.out.println("Введите вычисляемое выражение");
+        Expression expression;
+        expression = new Expression();
+        System.out.println("Input math expression or \"help\" command for to get referential information");
         expression.setUserInput(scan.nextLine());
+        return expression;
     }
 
     /**
