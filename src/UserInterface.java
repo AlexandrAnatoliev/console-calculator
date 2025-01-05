@@ -3,16 +3,12 @@ package src;
 import java.util.Scanner;
 
 /**
- * Класс UserInterface создает объект Expression, принимает из консоли ввод пользователя
- * распарсивает его на элементы, возвращает пользователю вычисленный ответ
- * при необходимости выводит сообщения об ошибке и справку для пользователя об использовании программы
+ * To set new math expression by user string input
+ * and to parse user string input on elements
  */
-
 public class UserInterface {
-    private Scanner scan;
 
     public UserInterface() {
-        this.scan = null;
     }
 
     /**
@@ -21,7 +17,7 @@ public class UserInterface {
      * @return New expression contains user string input
      */
     public Expression setUserInput() {
-        this.scan = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
         Expression expression;
         expression = new Expression();
         System.out.println("Input math expression or \"help\" command for to get referential information");
