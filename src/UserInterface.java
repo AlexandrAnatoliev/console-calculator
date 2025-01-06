@@ -26,23 +26,26 @@ public class UserInterface {
     }
 
     /**
-     * To output referential information about available commands
+     * If user input contains "exit" command, then return "true"
      *
      * @param expression Contains user input
      * @return true if user input contains "help" commands
      */
     public boolean inputIsHelp(Expression expression) {
-        if (expression.getUserInput().contains("help")) {
-            System.out.println("The following commands are available:");
-            System.out.println("help - to get referential information");
-            System.out.println("exit - to stop program and exit");
-            System.out.println("1 + 2 - addition");
-            System.out.println("1 - 2 - subtraction");
-            System.out.println("1 * 2 - multiplication");
-            System.out.println("1 / 2 - division");
-            return true;
-        }
-        return false;
+        return expression.getUserInput().contains("help");
+    }
+
+    /**
+     * To output referential information about available commands
+     */
+    public void showHelp() {
+        System.out.println("The following commands are available:");
+        System.out.println("help - to get referential information");
+        System.out.println("exit - to stop program and exit");
+        System.out.println("1 + 2 - addition");
+        System.out.println("1 - 2 - subtraction");
+        System.out.println("1 * 2 - multiplication");
+        System.out.println("1 / 2 - division");
     }
 
     /**
