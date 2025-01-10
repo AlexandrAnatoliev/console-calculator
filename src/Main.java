@@ -4,7 +4,7 @@ package src;
  * console-calculator
  *
  * @author AlexandrAnatoliev
- * @version 0.15.0 2024-12-26
+ * @version 0.15.1 2024-12-26
  */
 
 public class Main {
@@ -17,7 +17,7 @@ public class Main {
         while (!input.getStringInput().contains("exit")) {
 
             if (input.countWords() == 1) {
-                OneWord command = new OneWord(input);
+                UserCommand command = new UserCommand(input);
 
                 if (command.getCommand().contains("help")) {
                     userInterface.showHelp();
