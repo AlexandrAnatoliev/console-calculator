@@ -1,6 +1,7 @@
 package src;
 
 public class MathExpression implements Data {
+    private final UserCommands command = UserCommands.MATH_EXPRESSION;
     private final String[] words;
     private final double num1;
     private final double num2;
@@ -17,6 +18,11 @@ public class MathExpression implements Data {
             case "/" -> Operators.DIVISION;
             default -> throw new IllegalStateException("Unexpected value: " + words[1]);
         };
+    }
+
+    @Override
+    public UserCommands get() {
+        return this.command;
     }
 
     public double getNum1() {

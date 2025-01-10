@@ -4,7 +4,7 @@ package src;
  * console-calculator
  *
  * @author AlexandrAnatoliev
- * @version 0.15.2 2024-12-26
+ * @version 0.16.2 2025-01-10
  */
 
 public class Main {
@@ -16,20 +16,14 @@ public class Main {
 
         while (!input.getStringInput().contains("exit")) {
 
-            if (input.countWords() == 1) {
-                UserCommand command = new UserCommand(input);
-
-                if (command.getCommand().contains("help")) {
-                    userInterface.showHelp();
-                } else if (command.getCommand().contains("exit")) {
-                    System.out.println("good buy");
-                    return;
-                }
-
-            } else if (input.countWords() == 2) {
-                System.out.println("two words");
+            Data data = Data.of(input);
+            if (data.get() == UserCommands.HELP) {
+                userInterface.showHelp();
+            } else if (data.get() == UserCommands.EXIT) {
+                System.out.println("stop program");
+                return;
             } else {
-                MathExpression expression = new MathExpression(input);
+                MathExpression expression = (MathExpression) data;
                 System.out.println(input.getStringInput() + " = " + calculator.getResult(expression));
             }
             input = userInterface.createUserInput();

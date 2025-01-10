@@ -1,6 +1,6 @@
 package src;
 
-public class UserInput implements Data {
+public class UserInput {
     private final String stringInput;
 
     public UserInput(String stringInput) {
@@ -16,5 +16,18 @@ public class UserInput implements Data {
      */
     public int countWords() {
         return stringInput.split(" ").length;
+    }
+
+    public static class ExitCommand implements Data {
+        public static final ExitCommand EXIT = new ExitCommand();
+
+        private ExitCommand() {
+        }
+
+        @Override
+        public UserCommands get() {
+            return UserCommands.EXIT;
+        }
+
     }
 }
