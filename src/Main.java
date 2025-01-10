@@ -4,11 +4,12 @@ package src;
  * console-calculator
  *
  * @author AlexandrAnatoliev
- * @version 0.14.4 2024-12-26
+ * @version 0.14.5 2024-12-26
  */
 
 public class Main {
     public static void main(String[] args) {
+        Calculator calculator = new Calculator();
         UserInterface userInterface = new UserInterface();
         UserInput input = userInterface.createUserInput();
 
@@ -30,6 +31,7 @@ public class Main {
             System.out.println(ex.getNum1());
             System.out.println(ex.getNum2());
             System.out.println(ex.getOperator());
+            System.out.println(calculator.getResult(ex));
         }
          /*        Expression expression;
          UserInterface userInterface = new UserInterface();

@@ -23,4 +23,14 @@ public class Calculator {
             case DIVISION -> expression.getNum1() / expression.getNum2();
         };
     }
+
+    public double getResult(ThreeWords expression) {
+
+        return switch (expression.getOperator()) {
+            case MINUS -> expression.getNum1() - expression.getNum2();
+            case PLUS -> expression.getNum1() + expression.getNum2();
+            case TIMES -> expression.getNum1() * expression.getNum2();
+            case DIVISION -> expression.getNum1() / expression.getNum2();
+        };
+    }
 }
