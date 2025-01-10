@@ -25,6 +25,12 @@ public class UserInterface {
         return expression;
     }
 
+    public UserInput createUserInput() {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Input math expression or \"help\" command for to get referential information");
+        return new UserInput(scan.nextLine());
+    }
+
     /**
      * If user input contains "exit" command, then return "true"
      *
