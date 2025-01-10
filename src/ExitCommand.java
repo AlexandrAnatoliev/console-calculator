@@ -6,6 +6,9 @@ public class ExitCommand implements Data {
     private ExitCommand() {
     }
 
+    /**
+     * @return command type of inputted by user
+     */
     @Override
     public CommandTypes get() {
         return CommandTypes.EXIT;
