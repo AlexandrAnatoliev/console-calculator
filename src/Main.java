@@ -9,29 +9,30 @@ package src;
 
 public class Main {
     public static void main(String[] args) {
+
         Calculator calculator = new Calculator();
         UserInterface userInterface = new UserInterface();
         UserInput input = userInterface.createUserInput();
 
-        if (input.countWords() == 1) {
-            OneWord command = new OneWord(input);
+        while (!input.getStringInput().contains("exit")) {
 
-            if (command.getCommand().contains("help")) {
-                userInterface.showHelp();
-            }
-            if (command.getCommand().contains("exit")) {
-                System.out.println("good buy");
-                return;
-            }
+            if (input.countWords() == 1) {
+                OneWord command = new OneWord(input);
 
-        } else if (input.countWords() == 2) {
-            System.out.println("two words");
-        } else {
-            ThreeWords ex = new ThreeWords(input);
-            System.out.println(ex.getNum1());
-            System.out.println(ex.getNum2());
-            System.out.println(ex.getOperator());
-            System.out.println(calculator.getResult(ex));
+                if (command.getCommand().contains("help")) {
+                    userInterface.showHelp();
+                } else if (command.getCommand().contains("exit")) {
+                    System.out.println("good buy");
+                    return;
+                }
+
+            } else if (input.countWords() == 2) {
+                System.out.println("two words");
+            } else {
+                ThreeWords expression = new ThreeWords(input);
+                System.out.println(input.getStringInput() + " = " + calculator.getResult(expression));
+            }
+            input = userInterface.createUserInput();
         }
          /*        Expression expression;
          UserInterface userInterface = new UserInterface();
