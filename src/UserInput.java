@@ -25,8 +25,8 @@ public class UserInput {
         }
 
         @Override
-        public UserCommands get() {
-            return UserCommands.EXIT;
+        public CommandTypes get() {
+            return CommandTypes.EXIT;
         }
 
     }

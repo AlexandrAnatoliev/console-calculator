@@ -7,7 +7,7 @@ public class ExitCommand implements Data {
     }
 
     @Override
-    public UserCommands get() {
-        return UserCommands.EXIT;
+    public CommandTypes get() {
+        return CommandTypes.EXIT;
     }
 }

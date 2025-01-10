@@ -1,7 +1,7 @@
 package src;
 
 public class MathExpression implements Data {
-    private final UserCommands command = UserCommands.MATH_EXPRESSION;
+    private final CommandTypes command = CommandTypes.MATH_EXPRESSION;
     private final String[] words;
     private final double num1;
     private final double num2;
@@ -21,7 +21,7 @@ public class MathExpression implements Data {
     }
 
     @Override
-    public UserCommands get() {
+    public CommandTypes get() {
         return this.command;
     }
 

@@ -7,8 +7,8 @@ public class HelpCommand implements Data {
     }
 
     @Override
-    public UserCommands get() {
-        return UserCommands.HELP;
+    public CommandTypes get() {
+        return CommandTypes.HELP;
     }
 
 }

@@ -11,7 +11,7 @@ public class Calculator {
      * To compute expression result
      *
      * @param expression Contains math expression
-     * @return Expression result or "NullPointerException" if math operator is not correct
+     * @return expression result or "NullPointerException" if math operator is not correct
      */
     public double getResult(MathExpression expression) {
 
