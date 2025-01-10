@@ -1,7 +1,7 @@
 package src;
 
 public class MathExpression implements Data {
-    private final UserCommands command = UserCommands.MATH_EXPRESSION;
+    private final CommandTypes command = CommandTypes.MATH_EXPRESSION;
     private final String[] words;
     private final double num1;
     private final double num2;
@@ -20,19 +20,31 @@ public class MathExpression implements Data {
         };
     }
 
+    /**
+     * @return data type
+     */
     @Override
-    public UserCommands get() {
+    public CommandTypes get() {
         return this.command;
     }
 
+    /**
+     * @return first number of math expression
+     */
     public double getNum1() {
         return num1;
     }
 
+    /**
+     * @return second number of math expression
+     */
     public double getNum2() {
         return num2;
     }
 
+    /**
+     * @return used operator of math expression
+     */
     public Operators getOperator() {
         return operator;
     }

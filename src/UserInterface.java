@@ -3,14 +3,17 @@ package src;
 import java.util.Scanner;
 
 /**
- * To set new math expression by user string input
- * and to parse user string input on elements
+ * To input data by user and output by computer
  */
 public class UserInterface {
 
     public UserInterface() {
     }
 
+    /**
+     * To input data by user
+     * @return user input in string
+     */
     public UserInput createUserInput() {
         Scanner scan = new Scanner(System.in);
         System.out.println("Input math expression or \"help\" command for to get referential information");

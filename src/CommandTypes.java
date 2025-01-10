@@ -1,6 +1,6 @@
 package src;
 
-public enum UserCommands {
+public enum CommandTypes {
     HELP,
     EXIT,
     MATH_EXPRESSION
