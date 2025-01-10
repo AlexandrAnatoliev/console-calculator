@@ -1,6 +1,6 @@
 package src;
 
-public class UserCommand implements Data{
+public class UserCommand {
     private final String command;
 
     public UserCommand(UserInput input) {

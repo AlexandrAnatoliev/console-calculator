@@ -1,6 +1,6 @@
 package src;
 
-public class UserInput implements Data {
+public class UserInput {
     private final String stringInput;
 
     public UserInput(String stringInput) {
