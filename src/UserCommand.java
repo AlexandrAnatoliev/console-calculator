@@ -1,9 +1,9 @@
 package src;
 
-public class OneWord implements Data{
+public class UserCommand implements Data{
     private final String command;
 
-    public OneWord(UserInput input) {
+    public UserCommand(UserInput input) {
         this.command = input.getStringInput();
     }
 

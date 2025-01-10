@@ -13,7 +13,7 @@ public class Calculator {
      * @param expression Contains math expression
      * @return Expression result or "NullPointerException" if math operator is not correct
      */
-    public double getResult(ThreeWords expression) {
+    public double getResult(MathExpression expression) {
 
         return switch (expression.getOperator()) {
             case MINUS -> expression.getNum1() - expression.getNum2();

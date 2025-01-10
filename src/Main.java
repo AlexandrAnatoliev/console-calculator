@@ -4,7 +4,7 @@ package src;
  * console-calculator
  *
  * @author AlexandrAnatoliev
- * @version 0.15.0 2024-12-26
+ * @version 0.15.2 2024-12-26
  */
 
 public class Main {
@@ -17,7 +17,7 @@ public class Main {
         while (!input.getStringInput().contains("exit")) {
 
             if (input.countWords() == 1) {
-                OneWord command = new OneWord(input);
+                UserCommand command = new UserCommand(input);
 
                 if (command.getCommand().contains("help")) {
                     userInterface.showHelp();
@@ -29,7 +29,7 @@ public class Main {
             } else if (input.countWords() == 2) {
                 System.out.println("two words");
             } else {
-                ThreeWords expression = new ThreeWords(input);
+                MathExpression expression = new MathExpression(input);
                 System.out.println(input.getStringInput() + " = " + calculator.getResult(expression));
             }
             input = userInterface.createUserInput();
