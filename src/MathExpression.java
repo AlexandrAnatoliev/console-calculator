@@ -20,19 +20,31 @@ public class MathExpression implements Data {
         };
     }
 
+    /**
+     * @return data type
+     */
     @Override
     public CommandTypes get() {
         return this.command;
     }
 
+    /**
+     * @return first number of math expression
+     */
     public double getNum1() {
         return num1;
     }
 
+    /**
+     * @return second number of math expression
+     */
     public double getNum2() {
         return num2;
     }
 
+    /**
+     * @return used operator of math expression
+     */
     public Operators getOperator() {
         return operator;
     }
