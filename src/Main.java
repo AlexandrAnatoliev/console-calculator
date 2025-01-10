@@ -4,7 +4,7 @@ package src;
  * console-calculator
  *
  * @author AlexandrAnatoliev
- * @version 0.16.4 2025-01-10
+ * @version 0.16.5 2025-01-10
  */
 
 public class Main {
