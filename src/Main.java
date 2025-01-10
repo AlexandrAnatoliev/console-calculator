@@ -9,7 +9,19 @@ package src;
 
 public class Main {
     public static void main(String[] args) {
-        Expression expression;
+        UserInterface userInterface = new UserInterface();
+        UserInput input = userInterface.createUserInput();
+        if(input.countWords() == 1)
+        {
+            OneWord command = new OneWord(input);
+            System.out.println(command.getCommand());
+        } else if (input.countWords() == 2) {
+            System.out.println("two words");
+        }
+        else {
+            System.out.println("three");
+        }
+/*        Expression expression;
         UserInterface userInterface = new UserInterface();
         Calculator calculator = new Calculator();
 
@@ -29,5 +41,6 @@ public class Main {
             System.out.println(expression.getUserInput() + " = " + calculator.getResult(expression));
         }
         while (!userInterface.inputIsExit(expression));
+  */
     }
 }
